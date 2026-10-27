@@ -2,10 +2,10 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
         xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
-    <loc>https://sadra-s-website.vercel.app</loc>
-    <xhtml:link rel="alternate" hreflang="en" href="https://sadra-s-website.vercel.app" />
-    <xhtml:link rel="alternate" hreflang="fa" href="https://sadra-s-website.vercel.app/fa" />
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://sadra-s-website.vercel.app" />
+    <loc>https://sadrahub.ir</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://sadrahub.ir" />
+    <xhtml:link rel="alternate" hreflang="fa" href="https://sadrahub.ir/fa" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://sadrahub.ir" />
     <changefreq>monthly</changefreq>
     <priority>1.0</priority>
   </url>
