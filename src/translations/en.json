@@ -49,6 +49,10 @@
     {
       "title": "Portfolio Website",
       "description": "This very site! A minimal, responsive portfolio built with modern tools and a focus on clean design and performance."
+    },
+    {
+      "title": "School Website",
+      "description": "Professional School website with dashboards for each Students, Teachers, and Principal with capabilities of managing the grades and giving report cards and etc"
     }
   ],
 
@@ -68,6 +72,6 @@
   "contact.form.error": "Something went wrong. Try again later.",
 
   "footer.copyright": "\u00a9 {year} Sadra Hoseinpour",
-  "footer.builtWith": "Built with React + Tailwind + Vite",
+  "footer.builtWith": "Built with React",
   "footer.codeWithPassion": "< code with passion />"
 }
