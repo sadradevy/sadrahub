@@ -56,6 +56,7 @@ export default function ContactForm() {
     <form onSubmit={handleSubmit} className="w-full max-w-lg mx-auto space-y-4 sm:space-y-5">
       <div>
         <label
+          htmlFor="contact-name"
           className="block text-[10px] sm:text-xs tracking-[0.15em] uppercase mb-1.5 sm:mb-2 font-mono"
           style={{ color: "var(--text-muted)" }}
         >
@@ -66,6 +67,7 @@ export default function ContactForm() {
             {fieldIcons.name}
           </span>
           <input
+            id="contact-name"
             type="text"
             name="name"
             value={form.name}
@@ -88,6 +90,7 @@ export default function ContactForm() {
 
       <div>
         <label
+          htmlFor="contact-email"
           className="block text-[10px] sm:text-xs tracking-[0.15em] uppercase mb-1.5 sm:mb-2 font-mono"
           style={{ color: "var(--text-muted)" }}
         >
@@ -98,6 +101,7 @@ export default function ContactForm() {
             {fieldIcons.email}
           </span>
           <input
+            id="contact-email"
             type="email"
             name="email"
             value={form.email}
@@ -120,6 +124,7 @@ export default function ContactForm() {
 
       <div>
         <label
+          htmlFor="contact-message"
           className="block text-[10px] sm:text-xs tracking-[0.15em] uppercase mb-1.5 sm:mb-2 font-mono"
           style={{ color: "var(--text-muted)" }}
         >
@@ -130,6 +135,7 @@ export default function ContactForm() {
             {fieldIcons.message}
           </span>
           <textarea
+            id="contact-message"
             name="message"
             value={form.message}
             onChange={handleChange}
