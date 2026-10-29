@@ -59,14 +59,15 @@ export default function Projects() {
     ["React", "TypeScript", "Tailwind", "Node.js"],
     ["Next.js", "Prisma", "PostgreSQL", "Docker"],
     ["React", "Tailwind", "Vite"],
+    ["React", "Node.js", "Tailwind CSS", "PostgreSQL"],
   ];
 
   const projectsData = t("projects.items");
 
   const projects = projectsData.map((item, i) => ({
     ...item,
-    icon: projectIcons[i],
-    tags: projectTags[i],
+    icon: projectIcons[i] ?? <FaCode className="text-xl sm:text-3xl" />,
+    tags: projectTags[i] ?? [],
     links: [
       { icon: <FaGithub />, href: "#" },
       { icon: <FaExternalLinkAlt />, href: "#" },

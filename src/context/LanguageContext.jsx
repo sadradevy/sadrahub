@@ -8,14 +8,24 @@ const LanguageContext = createContext();
 
 export function LanguageProvider({ children }) {
   const [lang, setLang] = useState(() => {
-    return localStorage.getItem("lang") || "en";
+    // localhost storage is shared by projects that use the same port. Ignore
+    // values left by other apps so a stale language cannot break first render.
+    try {
+      return localStorage.getItem("lang") === "fa" ? "fa" : "en";
+    } catch {
+      return "en";
+    }
   });
 
   useEffect(() => {
     document.documentElement.lang = lang;
     document.documentElement.dir = lang === "fa" ? "rtl" : "ltr";
     document.querySelector('meta[property="og:locale"]')?.setAttribute("content", lang === "fa" ? "fa_IR" : "en_US");
-    localStorage.setItem("lang", lang);
+    try {
+      localStorage.setItem("lang", lang);
+    } catch {
+      // The page still works when browser storage is unavailable.
+    }
   }, [lang]);
 
   const toggleLang = useCallback(() => {
@@ -24,7 +34,7 @@ export function LanguageProvider({ children }) {
 
   const t = useCallback(
     (key, params = {}) => {
-      let value = translations[lang][key];
+      let value = translations[lang]?.[key];
       if (value === undefined) return key;
       if (typeof value === "string") {
         return value.replace(/\{(\w+)\}/g, (_, p) => params[p] ?? `{${p}}`);

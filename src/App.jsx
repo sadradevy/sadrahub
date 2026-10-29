@@ -13,8 +13,6 @@ import useTypewriter from "./hooks/useTypewriter";
 import { useLanguage } from "./context/LanguageContext";
 import {
   FaGithub,
-  FaLinkedin,
-  FaTwitter,
   FaChevronDown,
   FaArrowRight,
   FaCode,
